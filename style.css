@@ -61,6 +61,7 @@ body::after {
 }
 
 .bg-image {
+    background-color: hsl(185, 73%, 50%);
     background-image: url(images/bg-pattern-card.svg);
     background-position: center;
     background-size: cover;
