@@ -1,0 +1,133 @@
+:root {
+    /* primary */
+    --color-dark-cyan: hsl(185, 75%, 39%);
+    --color-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --color-dark-grayish-blue: hsl(227, 10%, 46%);
+
+    /* Neutral */
+    --color-dark-grey: hsl(0, 0%, 59%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-dark-cyan);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before {
+    content: '';
+    background-image: url(images/bg-pattern-top.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -35%;
+    left: -35%;
+    transform: rotate(155deg);
+    opacity: 0.5;
+}
+
+body::after {
+    content: '';
+    background-image: url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -45%;
+    right: -45%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.bg-image img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-photo {
+    position: absolute;
+    top: 24%;
+}
+
+.profile-photo img {
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.desc-card {
+    background-color: white;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    color: var(--color-dark-desaturated-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+}
+
+.desc-card .name-and-age {
+    display: flex;
+    margin-top: 90px;
+}
+
+.desc-card .name-and-age p:nth-child(1) {
+    margin-right: 10px;
+}
+
+.desc-card .name-and-age p:nth-child(2) {
+    color: var(--color-dark-grayish-blue);
+}
+
+.desc-card .country {
+    color: var(--color-dark-grayish-blue);
+    font-size: 16px;
+    margin: 10px auto 15px auto;
+}
+
+.desc-card .stats {
+    border-top: 1px solid lightgray;
+    display: flex;
+    width: 100%;
+    padding: 25px 40px;
+    justify-content: space-between;
+}
+
+.desc-card .stats .followers, .likes, .photos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc-card .stats .followers p:nth-child(2), .likes p:nth-child(2), .photos p:nth-child(2) {
+    color: var(--color-dark-grey);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
