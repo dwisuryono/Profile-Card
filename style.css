@@ -36,6 +36,27 @@ body {
     z-index: -1;
 }
 
+@media screen and (max-width: 810px) {
+    #container::before {
+        left: -610px;
+    }
+
+    #container::after {
+        right: -500px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #container::before {
+        left: -750px;
+    }
+
+    #container::after {
+        bottom: -600px;
+        right: -700px;
+    }
+}
+
 #container {
     width: 350px;
     margin: 125px auto;
